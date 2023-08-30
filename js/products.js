@@ -1,9 +1,11 @@
 window.addEventListener("DOMContentLoaded", async () => {
+  const catIde = localStorage.getItem('catID'); //entrega 2: llamo a catID que se guarda en localStorage a traves de categories.html
+const url = "https://japceibal.github.io/emercado-api/cats_products/" + catIde + '.json'; //entrega 2: modificar link API con catIde
     const productContainer = document.getElementById("product-list"); // Obtenemos el contenedor donde mostraremos los productos
     
     try {
       // Realizamos la solicitud a la URL que contiene los productos en JSON
-      const response = await fetch("https://japceibal.github.io/emercado-api/cats_products/101.json");
+      const response = await fetch(url);
       // Convertimos la respuesta JSON en un objeto JavaScript
       const data = await response.json();
 
