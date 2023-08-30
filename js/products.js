@@ -33,3 +33,4 @@ const url = "https://japceibal.github.io/emercado-api/cats_products/" + catIde +
       console.error("Error al obtener los productos:", error);
     }
   });
+  
