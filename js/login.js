@@ -1,3 +1,4 @@
+// Función que se ejecuta cuando el usuario intenta iniciar sesión
 function login() {
    
     // Obtenemos los valores ingresados en los campos de usuario y contraseña
@@ -22,4 +23,21 @@ function login() {
     // Redireccionamos a la portada
     window.location.href = "index.html";
 }
+
+
+// Escuchar el evento "keydown" en los campos de entrada (para iniciar sesión con un Enter)
+document.getElementById("username").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Evita que se realice el comportamiento predeterminado del Enter (como enviar un formulario)
+        login(); // Llama a la función de inicio de sesión
+    }
+});
+
+document.getElementById("password").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Evita que se realice el comportamiento predeterminado del Enter (como enviar un formulario)
+        login(); // Llama a la función de inicio de sesión
+    }
+});
+
 
